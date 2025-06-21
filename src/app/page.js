@@ -1,14 +1,11 @@
 import Head from "next/head";
+
+import Hero from "@/components/Hero";
+import Filter from "@/components/Filter";
+
 import ProductList from "@/components/ProductList";
 
 export default async function HomePage() {
-  const res = await fetch("https://fakestoreapi.com/products", {
-    cache: "no-store",
-  });
-  const products = await res.json();
-
-  // console.log("products: ", products);
-
   return (
     <>
       <Head>
@@ -21,8 +18,9 @@ export default async function HomePage() {
       </Head>
 
       <main className="container">
-        <h1>Products</h1>
-        <ProductList products={products} />
+        <Hero />
+        <Filter />
+        <ProductList />
       </main>
     </>
   );

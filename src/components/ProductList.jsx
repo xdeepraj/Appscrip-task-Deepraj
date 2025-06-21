@@ -1,8 +1,12 @@
-export default function ProductList(products) {
-  // console.log("products from productList: ", products);
+"use client";
+import { useProductList } from "@/context/ProductListContext";
+
+export default function ProductList() {
+  const { filteredProducts } = useProductList();
+
   return (
     <div className="grid">
-      {products.products.map((product) => (
+      {filteredProducts.map((product) => (
         <div key={product.id}>
           <img
             src={product.image}
