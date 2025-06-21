@@ -5,8 +5,8 @@ import styles from "./Filter.module.css";
 import { useProductList } from "@/context/ProductListContext";
 
 export default function Filter() {
-  const { filteredProducts, setFilters } = useProductList();
-  const [showFilter, setShowFilter] = useState(true);
+  const { filteredProducts, setFilters, showFilter, setShowFilter } =
+    useProductList();
 
   const toggleFilter = () => {
     setShowFilter((prev) => !prev);

@@ -11,6 +11,7 @@ export function ProductListProvider({ children }) {
     category: null,
     priceRange: [0, 1000],
   });
+  const [showFilter, setShowFilter] = useState(true);
 
   useEffect(() => {
     async function fetchProducts() {
@@ -46,7 +47,14 @@ export function ProductListProvider({ children }) {
 
   return (
     <ProductListContext.Provider
-      value={{ products, filteredProducts, filters, setFilters }}
+      value={{
+        products,
+        filteredProducts,
+        filters,
+        setFilters,
+        showFilter,
+        setShowFilter,
+      }}
     >
       {children}
     </ProductListContext.Provider>
