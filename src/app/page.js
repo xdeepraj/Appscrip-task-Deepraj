@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ProductList from "./components/ProductList";
+import ProductList from "@/components/ProductList";
 
 export default async function HomePage() {
   const res = await fetch("https://fakestoreapi.com/products", {

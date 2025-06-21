@@ -1,0 +1,95 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.loremIpsum {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+  justify-content: space-around;
+  background-color: #000000;
+  color: #eb4c6b;
+  font-size: smaller;
+}
+
+.loremIpsum div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loremIpsum img {
+  width: 15px;
+  height: 15px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 100px;
+  margin: 40px 0;
+}
+
+.logoLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.logoRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.logoRight img {
+  margin-left: 15px;
+}
+
+.logoRight img:first-child {
+  margin-left: 0;
+}
+
+.logoCenter {
+  text-align: center;
+  flex: 1;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    gap: 1rem;
+  }
+
+  .logo a {
+    font-size: 1.2rem;
+  }
+}
