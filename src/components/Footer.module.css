@@ -37,8 +37,13 @@
 .rightColumn > *,
 .leftCol > *,
 .middleCol > *,
-.rightCol > * {
+.rightCol > *,
+.contactInfo > * {
   margin-bottom: 20px;
+}
+
+.general-wrapper {
+  display: block; /* Default: stacked vertically */
 }
 
 .general {
@@ -65,4 +70,101 @@
   justify-content: center;
   padding: 20px;
   font-size: 12px;
+}
+
+.mobileSeparator,
+.generalMobileSeparator,
+.metaMuseAcceptsMOBILE {
+  display: none;
+}
+
+.metaMuseAcceptsWEB > h3 {
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .topRow {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .leftColumn {
+    border-bottom: 1px solid white;
+  }
+
+  .newsletterForm {
+    padding-top: 0px;
+  }
+
+  .emailInput {
+    width: 60%;
+    padding: 12px;
+  }
+
+  .submitButton {
+    padding: 12px;
+  }
+
+  .rightColumn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactInfo {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid white;
+  }
+
+  .mobileSeparator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+    align-self: center;
+  }
+
+  .generalMobileSeparator,
+  .metaMuseAcceptsMOBILE {
+    display: flex;
+  }
+
+  .metaMuseAcceptsMOBILE {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    font-size: 13px;
+  }
+
+  .metaMuseAcceptsMOBILE > h3 {
+    padding-bottom: 20px;
+  }
+
+  .transaction,
+  .leftCol > p,
+  .middleCol > p,
+  .removeForMobile,
+  .metaMuseAcceptsWEB {
+    display: none;
+  }
+
+  .bottomRow {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .leftCol,
+  .middleCol,
+  .rightCol {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px 0px 0px;
+    font-size: 13px;
+    border-bottom: 1px solid white;
+  }
 }

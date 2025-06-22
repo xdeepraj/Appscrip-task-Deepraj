@@ -24,8 +24,15 @@ export default function Footer() {
         {/* Right Column */}
         <div className={styles.rightColumn}>
           <h3>CONTACT US</h3>
-          <p className={styles.general}>+44 221 133 5360</p>
-          <p className={styles.general}>customercare@mettamuse.com</p>
+          <div className={styles.contactInfo}>
+            <p className={styles.general}>+44 221 133 5360</p>
+            <img
+              src="/images/star.png"
+              alt="star"
+              className={styles.mobileSeparator}
+            />
+            <p className={styles.general}>customercare@mettamuse.com</p>
+          </div>
 
           <h3>CURRENCY</h3>
           <div className={styles.general}>
@@ -45,6 +52,12 @@ export default function Footer() {
         {/* Left Column */}
         <div className={styles.leftCol}>
           <h3>mettā muse</h3>
+          <img
+            src="/images/arrow-down.png"
+            alt="arrow-down"
+            color="white"
+            className={styles.generalMobileSeparator}
+          />
           <p>About Us</p>
           <p>Stories</p>
           <p>Artisans</p>
@@ -55,6 +68,11 @@ export default function Footer() {
         {/* Middle Column */}
         <div className={styles.middleCol}>
           <h3>QUICK LINKS</h3>
+          <img
+            src="/images/arrow-down.png"
+            alt="arrow-down"
+            className={styles.generalMobileSeparator}
+          />
           <p>Orders & Shipping</p>
           <p>Join/Login as a Seller</p>
           <p>Payment & Pricing</p>
@@ -66,10 +84,27 @@ export default function Footer() {
         {/* Right Column */}
         <div className={styles.rightCol}>
           <h3>FOLLOW US</h3>
-          <img src="/images/follow-us.png" alt="follow-us" />
-          <h3>mettā muse ACCEPTS</h3>
-          <img src="/images/payments.png" alt="follow-us" />
+          <img
+            src="/images/arrow-down.png"
+            alt="arrow-down"
+            className={styles.generalMobileSeparator}
+          />
+          <img
+            src="/images/follow-us.png"
+            alt="follow-us"
+            className={styles.removeForMobile}
+          />
+
+          <div className={styles.metaMuseAcceptsWEB}>
+            <h3>mettā muse ACCEPTS</h3>
+            <img src="/images/payments.png" alt="follow-us" />
+          </div>
         </div>
+
+        <div className={styles.metaMuseAcceptsMOBILE}>
+            <h3>mettā muse ACCEPTS</h3>
+            <img src="/images/payments.png" alt="follow-us" />
+          </div>
       </div>
       <div className={styles.copyright}>
         Copyright &copy; 2025 mettamuse. All rights reserved.

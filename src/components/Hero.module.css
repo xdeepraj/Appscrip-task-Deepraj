@@ -5,6 +5,7 @@
   border-bottom: 1px solid #eeeeee;
   padding: 70px;
   padding: 70px;
+  text-align: center;
 }
 
 .discover {
@@ -15,4 +16,46 @@
 .hero p {
   font-size: 20px;
   padding-bottom: 10px;
+}
+
+.discoverMobile,
+.discoverParaMOBILE {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .discoverParaWEB {
+    display: none;
+  }
+
+  .discoverMobile {
+    display: flex;
+  }
+
+  .hero {
+    padding: 0px;
+    align-items: flex-start;
+  }
+
+  .discover {
+    /* text-align: center; */
+    font-size: 25px;
+    margin-top: 20px;
+  }
+
+  .discoverForMobile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .discoverParaMOBILE {
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .discoverParaMOBILE > p {
+    font-size: 15px;
+  }
 }

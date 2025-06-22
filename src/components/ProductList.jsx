@@ -123,9 +123,7 @@ export default function ProductList() {
             <img
               src={product.image}
               alt={product.title}
-              width={200}
-              height={200}
-              style={{ objectFit: "contain" }}
+              className={styles.productImage}
             />
             <h2 className={styles.title}>{product.title}</h2>
 

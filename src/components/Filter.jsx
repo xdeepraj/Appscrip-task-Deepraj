@@ -41,6 +41,8 @@ export default function Filter() {
         </div>
       </div>
 
+      <div className={styles.leftMobile}>FILTER</div>
+
       <div className={styles.sortWrapper}>
         <div className={styles.sortTrigger} onClick={toggleDropdown}>
           {sortType.toUpperCase()}

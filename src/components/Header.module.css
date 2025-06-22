@@ -94,12 +94,53 @@
   color: #000;
 }
 
+.logoLeftMOBILE {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .nav {
-    gap: 1rem;
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 5px !important;
+    margin: 0px 0;
+  }
+
+  .logoLeft {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logoCenter {
+    font-weight: 700;
+  }
+
+  .logoLeftMOBILE {
+    display: inline-block;
+  }
+
+  .logoImageMOBILE {
+    width: 30px;
+  }
+
+  .logoRight {
+    gap: 0rem;
   }
 
   .logo a {
     font-size: 1.2rem;
+  }
+
+  .language,
+  .profileMOBILE,
+  .nav {
+    display: none;
+  }
+
+  .loremIpsum div:first-child,
+  .loremIpsum div:last-child {
+    display: none;
   }
 }

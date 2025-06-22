@@ -21,8 +21,17 @@ export default function Header() {
 
       <div className={styles.logo}>
         <div className={styles.logoLeft}>
+          <img
+            src="/images/hamburger-menu.png"
+            alt="Logo"
+            className={styles.logoLeftMOBILE}
+          />
           <Link href="/">
-            <img src="/images/Logo.png" alt="Lorem Ipsum Logo" />
+            <img
+              src="/images/Logo.png"
+              alt="Logo"
+              className={styles.logoImageMOBILE}
+            />
           </Link>
         </div>
 
@@ -32,7 +41,11 @@ export default function Header() {
           <img src="/images/search-normal.png" alt="search-normal" />
           <img src="/images/heart.png" alt="heart" />
           <img src="/images/shopping-bag.png" alt="shopping-bag" />
-          <img src="/images/profile.png" alt="profile" />
+          <img
+            src="/images/profile.png"
+            alt="profile"
+            className={styles.profileMOBILE}
+          />
           <div className={styles.language}>
             <p>ENG</p>
             <img src="images/arrow-down.png" alt="arrow-down" />

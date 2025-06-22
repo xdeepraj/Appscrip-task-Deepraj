@@ -72,3 +72,29 @@
   background-color: #f9f9f9;
   color: #a22121;
 }
+
+.leftMobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 15px;
+  }
+  .left {
+    display: none;
+  }
+
+  .leftMobile {
+    display: block;
+    padding-left: 20px;
+  }
+
+  .sortWrapper {
+    /* border: 1px solid red; */
+    border-left: 1px solid #0f0e0e;
+    padding-left: 20px;
+  }
+}
