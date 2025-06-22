@@ -59,15 +59,19 @@ Hosted on Netlify:
 
 ```bash
 Appscrip-task-Deepraj/
-├── components/         # Reusable components
-├── pages/              # Pages rendered by Next.js
-│   └── index.tsx       # Main home page
-├── public/             # Static files like images
-├── styles/             # Custom CSS styles
-├── utils/              # API service and helper functions
+├── public/
+│   └── images/               # Static assets (SEO-friendly images)
+├── src/
+│   ├── app/
+│   │   ├── layout.js         # Root layout
+│   │   ├── page.js           # Home page
+│   │   └── globals.css       # Global styling
+│   ├── components/           # Reusable UI components
+│   └── context/
+│       └── productListContext.js  # Context API for product fetching and filtering
+├── README.md
 ├── package.json
-├── next.config.js
-└── README.md
+└── next.config.js
 ```
 
 ### 7. How to Run Locally
