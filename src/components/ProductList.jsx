@@ -80,22 +80,37 @@ export default function ProductList() {
 
                 {renderSelectionSummary(topic)}
 
-                {openSections[topic] &&
-                  filterOptions.map((option) => (
-                    <label
-                      key={`${topic}-${option}`}
-                      className={styles.checkboxLabel}
+                {openSections[topic] && (
+                  <>
+                    <div
+                      className={styles.unselectAll}
+                      onClick={() =>
+                        setSelectedOptions((prev) => ({
+                          ...prev,
+                          [topic]: [],
+                        }))
+                      }
                     >
-                      <input
-                        type="checkbox"
-                        checked={(selectedOptions[topic] || []).includes(
-                          option
-                        )}
-                        onChange={() => handleCheckboxChange(topic, option)}
-                      />
-                      {option}
-                    </label>
-                  ))}
+                      Unselect All
+                    </div>
+
+                    {filterOptions.map((option) => (
+                      <label
+                        key={`${topic}-${option}`}
+                        className={styles.checkboxLabel}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={(selectedOptions[topic] || []).includes(
+                            option
+                          )}
+                          onChange={() => handleCheckboxChange(topic, option)}
+                        />
+                        {option}
+                      </label>
+                    ))}
+                  </>
+                )}
               </div>
             ))}
           </div>
@@ -112,7 +127,8 @@ export default function ProductList() {
               height={200}
               style={{ objectFit: "contain" }}
             />
-            <h2>{product.title}</h2>
+            <h2 className={styles.title}>{product.title}</h2>
+
             <p>${product.price}</p>
           </div>
         ))}

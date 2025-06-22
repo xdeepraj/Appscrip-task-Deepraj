@@ -9,9 +9,10 @@ export function ProductListProvider({ children }) {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [filters, setFilters] = useState({
     category: null,
-    priceRange: [0, 1000],
+    priceRange: [0, 10000],
   });
   const [showFilter, setShowFilter] = useState(true);
+  const [sortType, setSortType] = useState("Recommended");
 
   useEffect(() => {
     async function fetchProducts() {
@@ -42,8 +43,26 @@ export function ProductListProvider({ children }) {
         p.price >= filters.priceRange[0] && p.price <= filters.priceRange[1]
     );
 
+    switch (sortType) {
+      case "PRICE: HIGH TO LOW":
+        filtered.sort((a, b) => b.price - a.price);
+        break;
+      case "PRICE: LOW TO HIGH":
+        filtered.sort((a, b) => a.price - b.price);
+        break;
+      case "NEWEST FIRST":
+        filtered.sort((a, b) => b.id - a.id);
+        break;
+      case "POPULAR":
+        filtered.sort((a, b) => b.rating?.count - a.rating?.count);
+        break;
+      case "RECOMMENDED":
+      default:
+        break;
+    }
+
     setFilteredProducts(filtered);
-  }, [filters, products]);
+  }, [filters, products, sortType]);
 
   return (
     <ProductListContext.Provider
@@ -54,6 +73,8 @@ export function ProductListProvider({ children }) {
         setFilters,
         showFilter,
         setShowFilter,
+        sortType,
+        setSortType,
       }}
     >
       {children}
