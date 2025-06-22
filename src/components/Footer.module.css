@@ -1,0 +1,68 @@
+.container {
+  padding: 70px 70px 0px 70px;
+  color: white;
+  background-color: #000000;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #808080;
+}
+
+.newsletterForm {
+  padding-top: 50px;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.emailInput {
+  padding: 20px;
+  width: 350px;
+  flex: 1;
+}
+
+.submitButton {
+  padding: 5px 50px;
+  border: 2px solid #262626;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #4c4c4c;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.leftColumn > *,
+.rightColumn > *,
+.leftCol > *,
+.middleCol > *,
+.rightCol > * {
+  margin-bottom: 20px;
+}
+
+.general {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  gap: 0.2rem;
+}
+
+.transaction {
+  font-size: 11px;
+}
+
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 70px;
+  padding-right: 50px;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 12px;
+}

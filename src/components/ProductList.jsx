@@ -129,7 +129,14 @@ export default function ProductList() {
             />
             <h2 className={styles.title}>{product.title}</h2>
 
-            <p>${product.price}</p>
+            <div className={styles.price}>
+              <p>${product.price}</p>
+              <img src="images/heart.png" alt="heart" />
+            </div>
+
+            <p className={styles.signIn}>
+              <u>Sign in</u> or <u>Create an account</u> to buy.
+            </p>
           </div>
         ))}
       </div>

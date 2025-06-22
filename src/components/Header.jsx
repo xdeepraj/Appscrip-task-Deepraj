@@ -33,6 +33,10 @@ export default function Header() {
           <img src="/images/heart.png" alt="heart" />
           <img src="/images/shopping-bag.png" alt="shopping-bag" />
           <img src="/images/profile.png" alt="profile" />
+          <div className={styles.language}>
+            <p>ENG</p>
+            <img src="images/arrow-down.png" alt="arrow-down" />
+          </div>
         </div>
       </div>
 

@@ -52,6 +52,16 @@
   justify-content: flex-end;
 }
 
+.language {
+  display: flex;
+  gap: 0;
+  font-weight: 700;
+}
+
+.language img {
+  margin-left: 0 !important;
+}
+
 .logoRight img {
   margin-left: 15px;
 }

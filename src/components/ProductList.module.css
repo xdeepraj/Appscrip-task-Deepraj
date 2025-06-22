@@ -20,7 +20,7 @@
 }
 
 .card {
-  padding: 1rem;
+  padding: 1rem 1rem 0.2rem 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   text-align: center;
@@ -97,4 +97,16 @@
 
 .unselectAll:hover {
   opacity: 0.8;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0px;
+}
+
+.signIn {
+  font-size: 13px;
+  text-align: left;
 }
